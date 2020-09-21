@@ -3,8 +3,8 @@
 #include "character.h"
 
 int main(int argc, char* argv[]) {
-	using std::stoi;
-	using std::cout;
+	//using std::stoi;
+	using namespace std;
 	try {
 		Character player = Character::parseUnit("fighter.json");
 		Character enemy = Character::parseUnit("enemy.json");

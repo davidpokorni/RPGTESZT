@@ -1,6 +1,7 @@
 #include "character.h"
 #include <iostream>
 #include <fstream>
+#include <string>
 
 Character::Character(const std::string name, int hp, int dmg) : name(name)
 {

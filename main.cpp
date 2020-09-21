@@ -2,12 +2,12 @@
 #include <string>
 #include "character.h"
 
-int main(int argc, char* argv[]) {
+int main() {
 	using std::stoi;
 	using std::cout;
 	try {
-		Character player(argv[1], stoi(argv[2]), stoi(argv[3]));
-		Character enemy(argv[4], stoi(argv[5]), stoi(argv[6]));
+		Character player("name",5,6);
+		Character enemy("name",5,6);
 		while (enemy.isAlive() && player.isAlive()) {
 			player.attack(enemy);
 			cout << player;

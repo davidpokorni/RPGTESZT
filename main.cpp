@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 #include "character.h"
-
+using namespace std;
 int main(int argc, char* argv[]) {
 	//using std::stoi;
-	using namespace std;
+	
 	try {
 		Character player = Character::parseUnit("fighter.json");
 		Character enemy = Character::parseUnit("enemy.json");

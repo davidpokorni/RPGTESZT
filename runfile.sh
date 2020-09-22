@@ -3,5 +3,4 @@
 IFS=$'\n';
 
 for i in `cat input.txt`; do
-    echo "$i" | ./a.out
-done
+    echo "$i" | ./a.out ; done

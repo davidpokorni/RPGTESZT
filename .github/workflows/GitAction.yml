@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: g++ -Wall main.cpp character.h character.cpp -o a
-      - run: sh ./runfile.sh a output.txt
+      - run: g++ -Wall main.cpp character.h character.cpp 
+      - run: chmod +x ./runfile.sh output.txt
       - run: diff output.txt goodoutput.txt
       

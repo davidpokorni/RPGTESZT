@@ -6,8 +6,8 @@ int main(int argc, char* argv[]) {
 	using std::stoi;
 	using std::cout;
 	try {
-		Character player = Character::parseUnit(argv[0]);
-		Character enemy = Character::parseUnit(argv[1]);
+		Character player = Character::parseUnit(argv[1]);
+		Character enemy = Character::parseUnit(argv[2]);
 		while (enemy.isAlive() && player.isAlive()) {
 			player.attack(enemy);
 			// Enemy dead

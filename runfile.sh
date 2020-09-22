@@ -2,6 +2,6 @@
 
 IFS=$'\n';
 
-for i in 'cat input.txt'; do
-    echo "$i" | ./a.out
+for i in `cat input.txt`; do
+    echo "$i" | ./*.out
 done

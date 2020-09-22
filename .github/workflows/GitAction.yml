@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: g++ -Wall main.cpp character.h character.cpp -o a
-      - run: ./runfile.sh a output.txt
+      - run: sh ./runfile.sh a output.txt
       - run: diff output.txt goodoutput.txt
       

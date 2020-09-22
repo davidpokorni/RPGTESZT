@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: g++ -Wall main.cpp character.h character.cpp
-      - run: ./runfile.sh
+      - run: sh ./runfile.sh

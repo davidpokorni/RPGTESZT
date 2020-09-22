@@ -3,8 +3,8 @@ name: RPG_Fight_Simulator_workflow
 on:
   push
 
-jobs_and_tests:
-  build:
+jobs:
+  build_and_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

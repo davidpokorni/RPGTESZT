@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: g++ -Wall main.cpp character.h character.cpp
-      - run: sh ./runfile.sh
-      - run: ./fighter.json
-      - run: ./enemy.json
+      - run: chmod +x ./runfile.sh 
+      - run: diff output.txt goodoutput.txt
+      

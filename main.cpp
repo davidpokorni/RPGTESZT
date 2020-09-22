@@ -2,27 +2,23 @@
 #include <string>
 #include "character.h"
 
-int main() {
+int main(int argc, char* argv[]) {
 	using std::stoi;
 	using std::cout;
 	try {
-		Character player("name",5,6);
-		Character enemy("name",5,6);
+		Character player = Character::parseUnit("fighter.json");
+		Character enemy = Character::parseUnit("enemy.json");
 		while (enemy.isAlive() && player.isAlive()) {
 			player.attack(enemy);
-			cout << player;
-			cout << enemy;
 			// Enemy dead
 			if (!enemy.isAlive()) {
-				cout << enemy.getName() << " died. " << player.getName() << " wins.\n";
+				cout << player.getName() << " wins. Remaining HP: " << player.getHp() << std::endl;
 				break;
 			}
 			enemy.attack(player);
-			cout << player;
-			cout << enemy;
 			// Player dead
 			if (!player.isAlive()) {
-				cout << player.getName() << " died. " << enemy.getName() << " wins.\n";
+				cout << enemy.getName() << " wins. Remaining HP: " << enemy.getHp() << std::endl;
 			}
 		}
 	}
@@ -30,4 +26,4 @@ int main() {
 		std::cerr << "Invalid argument\n";
 	}
 	return 0;
-} 
+}

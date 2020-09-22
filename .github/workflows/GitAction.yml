@@ -1,4 +1,4 @@
-name: Elso workflow
+name: RPG_Fight_Simulator_workflow
 
 on:
   push
@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: g++ -Wall main.cpp
+      - run: g++ -Wall main.cpp character.h character.cpp

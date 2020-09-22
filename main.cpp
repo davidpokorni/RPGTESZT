@@ -6,8 +6,8 @@ int main(int argc, char* argv[]) {
 	using std::stoi;
 	using std::cout;
 	try {
-		Character player = Character::parseUnit("fighter.json");
-		Character enemy = Character::parseUnit("enemy.json");
+		Character player = Character::parseUnit(argc[1]);
+		Character enemy = Character::parseUnit(argc[2]);
 		while (enemy.isAlive() && player.isAlive()) {
 			player.attack(enemy);
 			// Enemy dead

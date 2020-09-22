@@ -1,1 +1,1 @@
-"fighter.json" "enemy.json"
+fighter.json enemy.json
